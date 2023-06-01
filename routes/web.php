@@ -14,11 +14,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
-Route::get('/chatgpt', [ChatGPTController::class, 'index'])
+Route::get('/', [ChatGPTController::class, 'index'])
     ->name('chatgpt.index');
 Route::post('/chatgpt/ask', [ChatGPTController::class, 'ask'])
     ->name('chatgpt.ask');
